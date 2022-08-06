@@ -1,0 +1,320 @@
+@font-face{
+    src: url("https://raw.githubusercontent.com/AonMao888/fontfiles/main/KengTawng-002.ttf");
+    font-family: font1;
+}
+@font-face{
+    src: url("https://raw.githubusercontent.com/AonMao888/fontfiles/main/handwriting.ttf");
+    font-family: handwriting;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+body{
+    height: 100%;
+    background: #fff;
+}
+.div{
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    gap: 5px;
+}
+.div button{
+    width: 98%;
+    padding: 15px;
+    border: 1px solid teal;
+    border-radius: 4px;
+    font-size: 16px;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.div button h5{
+    margin: 0;
+    font-size: 17px;
+    font-family: font1;
+    font-weight: normal;
+    transition: 0.5s;
+}
+.div button:hover{
+    box-shadow: 2px 3px 3px rgba(0, 0, 0, 0.273);
+}
+.div button:hover p{
+    color: black;
+}
+.div button:hover h5{
+    color: black;
+}
+.div button:nth-child(1){
+    background: linear-gradient(159deg,rgb(65, 212, 225),royalblue);
+}
+.div button:nth-child(2){
+    background: linear-gradient(159deg,rgb(206, 255, 72),rgb(65, 225, 81));
+}
+.div button:nth-child(3){
+    background: linear-gradient(159deg,rgb(255, 96, 247),rgb(103, 17, 209));
+}
+.div button:nth-child(4){
+    background: linear-gradient(159deg,rgb(255, 96, 247),rgb(209, 17, 17));
+}
+.div button:nth-child(5){
+    background: linear-gradient(159deg,rgb(255, 38, 38),rgb(209, 135, 17));
+}
+.div button:nth-child(6){
+    background: linear-gradient(159deg,rgb(78, 38, 255),rgb(148, 17, 209));
+}
+.div button:nth-child(7){
+    background: linear-gradient(159deg,rgb(237, 255, 38),rgb(209, 135, 17));
+}
+.div button p{
+    margin: 0;
+    line-height: unset;
+    color: #fff;
+    transition: 0.5s;
+}
+.div button i{
+    font-size: 27px;
+    margin-bottom: 5px;
+}
+.div button:nth-child(1){
+    color: #fff;
+}
+.div button:nth-child(2){
+    color: rgb(255, 83, 83);
+}
+.div button:nth-child(3){
+    color: rgb(42, 234, 255);
+}
+.div button:nth-child(4){
+    color: rgb(83, 255, 97);
+}
+.div button:nth-child(5){
+    color: rgb(251, 247, 26);
+}
+.div button:nth-child(6){
+    color: rgb(191, 191, 191);
+}
+.div button:nth-child(7){
+    color: rgb(213, 107, 20);
+}
+.pop{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    background: rgba(0, 0, 0, 0.203);
+    display: none;
+}
+.pop .box{
+    background: #fff;
+    padding: 9px;
+    border-radius: 9px;
+    width: 519px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.pop .box h1{
+    margin: 5px;
+    font-size: 29px;
+    background: linear-gradient(159deg,royalblue,teal);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.pop .box p{
+    margin: 3px;
+    color: dimgray;
+    font-size: 19px;
+}
+.constart{
+    text-decoration: none;
+    padding: 8px;
+    width: 50%;
+    font-size: 18px;
+    letter-spacing: 1px;
+    border-radius: 4px;
+    background: teal;
+    color: #fff;
+    transition: 0.5s;
+    text-align: center;
+    border: none;
+}
+.constart:hover{
+    background: rgb(0, 88, 88);
+}
+.popclose{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 27px;
+    cursor: pointer;
+    color: rgb(255, 95, 95);
+    box-shadow: 2px 2px 2px rgb(106, 106, 106);
+    border-radius: 50%;
+    margin: 9px;
+}
+.top{
+    width: 72%;
+    height: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #eee;
+    border-radius: 5px;
+    padding: 5px 0;
+    margin: 7px auto;
+    border: 1px solid rgb(224, 224, 224);
+}
+.top a{
+    display: flex;
+    align-items: center;
+    margin: 5px 9px;
+    text-decoration: none;
+    padding: 5px 9px;
+    background: dimgray;
+    color: #fff;
+    border-radius: 4px;
+}
+.top a p{
+    margin: 5px;
+}
+.top h1{
+    margin: 2px;
+    font-size: 23px;
+    background: linear-gradient(159deg,royalblue,rgb(0, 187, 187));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.top .menu{
+    margin: 3px 11px;
+    font-size: 19px;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.1s;
+    cursor: pointer;
+    color: teal;
+}
+.top .menu:active{
+    background: #fff;
+}
+.class{
+    width: 100%;
+}
+.class h1{
+    width: 91%;
+    text-align: center;
+    margin: 3px;
+    font-size: 27px;
+    color: teal;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: handwriting;
+}
+.class h1 span{
+    color: #fff;
+    border-radius: 5px;
+    font-size: 23px;
+    background: royalblue;
+    padding: 3px 5px;
+    margin-left: 5px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+}
+.conlist{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.conlist .item{
+    background: #eee;
+    border-radius: 5px;
+    padding: 9px;
+    width: 151px;
+    margin: 4px;
+    border: 1px solid rgb(224, 224, 224);
+}
+.conlist .item p{
+    width: 100%;
+    color: dimgray;
+    margin: 0;
+    font-size: 17px;
+}
+.conlist .item h1{
+    margin: 0;
+    padding: 0;
+    font-size: 69px;
+    font-weight: normal;
+    text-align: center;
+    font-family: font1;
+    display: flex;
+    justify-content: center;
+}
+.conlist .item span{
+    width: 98%;
+    text-align: right;
+    margin: 1px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.conlist .item i{
+    margin: 3px;
+    width: 36px;
+    height: 36px;
+    font-size: 19px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: 0.5s;
+    cursor: pointer;
+}
+.conlist .item i:hover{
+    background: #fff;
+}
+
+
+@media(max-width:808px){
+    .div{
+        grid-template-columns: repeat(3,1fr);
+    }
+    .div button i{
+        font-size: 24px;
+    }
+    .top{
+        width: 88%;
+    }
+}
+@media(max-width:588px){
+    .div{
+        grid-template-columns: repeat(2,1fr);
+    }
+    .div button i{
+        font-size: 19px;
+    }
+    .div button p{
+        font-size: 15px;
+    }
+    .top{
+        width: 99%;
+    }
+    .conlist .item{
+        width: 99px;
+    }
+    .conlist .item h1{
+        font-size: 36px;
+    }
+}
