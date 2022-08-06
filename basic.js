@@ -14,6 +14,33 @@ const maindivinner = `<button class="abcbtn"><i class="fa-solid fa-list-ol"></i>
 <button class="tonebtn"><i class="fa-solid fa-6"></i><p>6 tones maker</p></button><button class="timebtn"><i class="fa-solid fa-calendar-day"></i><p>Time & Date</p></button>
 <button class="colorbtn"><i class="fa-solid fa-palette"></i><p>Colours</p></button><button class="numbtn"><i class="fa-solid fa-arrow-down-1-9"></i><p>Numbers</p></button>`;
 const classdiv = document.querySelector(".class");
+const basicinner = `<div class="top">
+<a href=""><i class="fa-solid fa-arrow-left"></i><p>Back</p></a>
+<h1>19 of consonants</h1>
+<i class="fa-solid fa-ellipsis-vertical menu"></i>
+</div>
+<h1>တူဝ်မႄႈလိၵ်ႈတႆး 19 တူဝ် <span>ဗျည်း ၁၉ လုံး</span></h1>
+<div class="conlist">
+<div class="item"><p>k[ka]</p><h1>ၵ</h1><span>[ကာ့]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>kh[kha]</p><h1>ၶ</h1><span>[ခါ့]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>ng[nga]</p><h1>င</h1><span>[ငါ့(င်)]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>j[ja]</p><h1>ၸ</h1><span>[ကြ]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>s[sa]</p><h1>ၸ</h1><span>[ဆာ့]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>ny[nya]</p><h1>ၺ</h1><span>[ည]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>d[da]</p><h1>တ</h1><span>[တ]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>th[tha]</p><h1>ထ</h1><span>[ထ]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>n[na]</p><h1>ၼ</h1><span>[န]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>b[ba]</p><h1>ပ</h1><span>[ပ]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>ph[pha]</p><h1>ၽ</h1><span>[ဖ]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>f[fa]</p><h1>ၾ</h1><span>[ဖာ]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>m[ma]</p><h1>မ</h1><span>[မ]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>y[ya]</p><h1>ယ</h1><span>[ယ]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>r[ra]</p><h1>ရ</h1><span>[ရ]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>l[la]</p><h1>လ</h1><span>[လ]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>w[wa]</p><h1>ဝ</h1><span>[ဝ]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>h[ha]</p><h1>ႁ</h1><span>[ဟ]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>a[aa]</p><h1>ဢ</h1><span>[အ]<i class="fa-solid fa-volume-high"></i></span></div>
+</div>`;
 
 
 abcbtn.addEventListener("click",()=>{
@@ -30,5 +57,5 @@ function constart(){
     pop.style.display = "none";
     popbox.innerHTML = "";
     maindiv.innerHTML = "";
-    classdiv.innerHTML = `lsjl`;
+    classdiv.innerHTML = basicinner;
 }
