@@ -318,4 +318,16 @@ body{
     .conlist .item h1{
         font-size: 36px;
     }
+    .pop .box{
+        width: 94%;
+    }
+    .pop .box h1{
+        font-size: 19px;
+    }
+    .pop .box p{
+        font-size: 15px;
+    }
+    .pop .box button{
+        font-size: 15px;
+    }
 }
