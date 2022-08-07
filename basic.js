@@ -21,7 +21,7 @@ const basicinner = `<div class="top">
 </div>
 <h1>တူဝ်မႄႈလိၵ်ႈတႆး 19 တူဝ် <span>ဗျည်း ၁၉ လုံး</span></h1>
 <div class="conlist">
-<div class="item"><p>k[ka]</p><h1>ၵ</h1><span>[ကာ့]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item" onclick="tospeak(ga)"><p>k[ka]</p><h1>ၵ</h1><span>[ကာ့]<i class="fa-solid fa-volume-high"></i></span></div>
 <div class="item"><p>kh[kha]</p><h1>ၶ</h1><span>[ခါ့]<i class="fa-solid fa-volume-high"></i></span></div>
 <div class="item"><p>ng[nga]</p><h1>င</h1><span>[ငါ့(င်)]<i class="fa-solid fa-volume-high"></i></span></div>
 <div class="item"><p>j[ja]</p><h1>ၸ</h1><span>[ကြ]<i class="fa-solid fa-volume-high"></i></span></div>
@@ -41,6 +41,29 @@ const basicinner = `<div class="top">
 <div class="item"><p>h[ha]</p><h1>ႁ</h1><span>[ဟ]<i class="fa-solid fa-volume-high"></i></span></div>
 <div class="item"><p>a[aa]</p><h1>ဢ</h1><span>[အ]<i class="fa-solid fa-volume-high"></i></span></div>
 </div>`;
+const vow12inner = `<div class="top">
+<a href=""><i class="fa-solid fa-arrow-left"></i><p>Back</p></a>
+<h1>12 of vowels</h1>
+<i class="fa-solid fa-ellipsis-vertical menu"></i>
+</div>
+<h1>မႄႈၵပ်းငဝ်ႈ 12 တူဝ် <span>သရ ၁၂ လုံး</span></h1>
+<div class="conlist">
+<div class="item"><p>k[ka]</p><h1>ၵ</h1><span>[ကာ့]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>kh[kha]</p><h1>ၶ</h1><span>[ခါ့]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>ng[nga]</p><h1>င</h1><span>[ငါ့(င်)]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>j[ja]</p><h1>ၸ</h1><span>[ကြ]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>s[sa]</p><h1>ၸ</h1><span>[ဆာ့]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>ny[nya]</p><h1>ၺ</h1><span>[ည]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>d[da]</p><h1>တ</h1><span>[တ]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>th[tha]</p><h1>ထ</h1><span>[ထ]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>n[na]</p><h1>ၼ</h1><span>[န]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>b[ba]</p><h1>ပ</h1><span>[ပ]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>ph[pha]</p><h1>ၽ</h1><span>[ဖ]<i class="fa-solid fa-volume-high"></i></span></div>
+<div class="item"><p>f[fa]</p><h1>ၾ</h1><span>[ဖာ]<i class="fa-solid fa-volume-high"></i></span></div>
+</div>`;
+
+const msg = new SpeechSynthesisUtterance();
+let voices = [];
 
 
 abcbtn.addEventListener("click",()=>{
@@ -49,6 +72,10 @@ abcbtn.addEventListener("click",()=>{
     <p>ၡမ်းဘာသာစကားမှာ အခြေခံအားဖြင့် <b>ဗျည်း ၁၉ လုံး</b> ၡိပါသည်။ လေ့လာရန်အောက်ကခလုဒ်ကို နှိပ်ပါ။</p>
     <button onclick="constart()" class="constart">Start</button>`;
 })
+function tospeak(text){
+    SpeechSynthesis.speak("hello world")
+    responsiveVoice.speak(text);
+}
 popclose.addEventListener("click",()=>{
     pop.style.display = "none";
     popbox.innerHTML = "";
@@ -58,4 +85,16 @@ function constart(){
     popbox.innerHTML = "";
     maindiv.innerHTML = "";
     classdiv.innerHTML = basicinner;
+}
+vowel12btn.addEventListener("click",()=>{
+    pop.style.display = "flex";
+    popbox.innerHTML = `<h1>12 of vowels(သရ ၁၂ လုံး)</h1>
+    <p>ၡမ်းဘာသာစကားမှာ အခြေခံအားဖြင့် <b>သရ ၁၂ လုံးနှင့် ၁၃ လုံး</b> ၡိပြီးယခုမှာ <b>သရ​​​​​​​​​​​ ၁၂လုံး</b>ကိုတင်ပြပါမည်။</b>။ လေ့လာရန်အောက်ကခလုဒ်ကို နှိပ်ပါ။</p>
+    <button onclick="vo12start()" class="constart">Start</button>`;
+})
+function vo12start(){
+    pop.style.display = "none";
+    popbox.innerHTML = "";
+    maindiv.innerHTML = "";
+    classdiv.innerHTML = vow12inner;
 }
